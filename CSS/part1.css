@@ -1,0 +1,295 @@
+#hero-section {
+  width: 100vw;
+  height: 100vh;
+  display: flow-root;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#menu {
+  background: transparent;
+  height: 45px;
+  padding-left: 18px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 7;
+
+}
+
+#menu ul,
+#menu li {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none
+}
+
+#menu ul {
+  width: 100%;
+  text-align: left;
+}
+
+#menu li {
+  display: inline-block;
+  position: relative;
+}
+
+#menu a {
+  display: block;
+  line-height: 45px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+#menu a.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 5px;
+}
+
+#menu li a:hover {
+  color: #0099CC;
+  background: rgb(170, 67, 229);
+}
+
+#menu input {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 45px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer
+}
+
+#menu label {
+  display: none;
+  line-height: 45px;
+  text-align: center;
+  position: absolute;
+  left: 35px
+}
+
+#menu label:before {
+  font-size: 1.6em;
+  color: #FFFFFF;
+  content: "\2261";
+  margin-left: 20px;
+}
+
+#menu ul.sub-menus {
+  height: auto;
+  overflow: hidden;
+  width: 170px;
+  background: #444444;
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+
+#menu ul.sub-menus li {
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+#menu ul.sub-menus a {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+#menu li:hover ul.sub-menus {
+  display: block
+}
+
+#menu ul.sub-menus a:hover {
+  background: rgb(170, 67, 229);
+  color: #444444;
+}
+
+#mode-switch-img {
+  order: -1;
+  margin-top: 60px;
+  margin-right: 40px;
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+#mode-switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+#mode-switch-img:hover {
+  transform: scale(1.1);
+}
+
+#pre-name {
+  display: flex;
+  flex-direction: column;
+  margin: 70px 0px 0px 20px;
+  font-family: "Playwrite PT", cursive;
+  font-optical-sizing: auto;
+  font-size: 60px;
+  font-weight: 18px;
+  font-style: normal;
+  color: black;
+  z-index: 1;
+}
+
+#name {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 0px 20px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-size: 70px;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background: #150BCF;
+  background: linear-gradient(to left, #150BCF 0%, #CF1A66 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index:2
+}
+
+#typed-output {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-weight: 100px;
+  font-style: normal;
+  font-size: 5vw;
+  margin-left: 50px;
+  margin-top: 30px;
+  height: 7vw;
+}
+
+#home {
+  height: 15px;
+  width: 15px;
+}
+
+.download {
+  background-color: orange;
+  border-radius: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  #menu {
+    position: relative
+  }
+
+  #menu ul {
+    background: #444444;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 7;
+    height: auto;
+    display: none;
+    text-align: left;
+  }
+
+  #menu ul.sub-menus {
+    width: 100%;
+    position: static;
+  }
+
+  #menu ul.sub-menus a {
+    padding-left: 30px;
+  }
+
+  #menu li {
+    display: block;
+    float: none;
+    width: auto;
+  }
+
+  #menu input,
+  #menu label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block
+  }
+
+  #menu input {
+    z-index: 7
+  }
+
+  #menu input:checked+label {
+    color: #FFFFFF
+  }
+
+  #menu input:checked+label:before {
+    content: "\00d7"
+  }
+
+  #menu input:checked~ul {
+    display: block
+  }
+}
+
+.gradient-text-1 {
+  background: linear-gradient(135deg, #F2C511, #E84B3C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientAnimation 4s linear infinite;
+}
+
+.gradient-text-2 {
+  background: linear-gradient(135deg, #42d392, #647eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientAnimation 4s linear infinite;
+}
+
+.gradient-text-3 {
+  background: linear-gradient(135deg, #E84B3C, #F2C511);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientAnimation 4s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#intro{
+  margin-top:100px;
+  z-index: 1;
+}
