@@ -14,18 +14,14 @@ function update_elements(theme) {
     if (theme == "dark") {
         profile.src = star_url + "transparent";
         lang.src = lang_url + "transparent";
-        contribution.src = contributionMap_url + "sunset";
+        //contribution.src = contributionMap_url + "sunset";
     }
     else {
         profile.src = star_url + "transparent";
         lang.src = lang_url + "transparent";
-        contribution.src = contributionMap_url + "default";
+        //contribution.src = contributionMap_url + "default";
     }
 }
-
-particlesJS.load('particles-js', 'Data/particlesjs-config-dark.json', function () {
-    console.log('callback - particles.js config loaded');
-});
 
 async function fetchGitHubRepos() {
     const url = getrepo_url;
@@ -76,4 +72,4 @@ function update_height() {
 }
 let contribution = document.getElementById("github-contribution-chart");
 
-contribution.onload = update_height;
+// contribution.onload = update_height;

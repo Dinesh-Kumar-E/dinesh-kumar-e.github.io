@@ -1,14 +1,41 @@
 #github-profile-details,
-#github-lang-details{
+#github-lang-details {
     background: rgba(42, 104, 168, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 7px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#github-title, 
+#gs1, 
+#recent-repos, 
+#Contribution-gh {
+  position: relative;
+  z-index: 1; /* Ensure these elements are on top */
+  background-color: transparent;
+}
+
+.custom-container{
+    position: relative;
+}
+
+#github-section {
+    width: 100%;
+    background-color: transparent;
 }
 
 #github-title{
+    margin-bottom: 40px;
+}
+
+#github-title,
+#github-contribution-title,
+#recent-rep-title {
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -18,38 +45,48 @@
     font-size: 30px;
 }
 
-#github1, #github2 {
-    display: flex;
-    justify-content: center;
+#github1,
+#github2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }
 
 #github-profile-details:hover,
-#github-lang-details:hover,#repimg1,#repimg2,#repimg3,#repimg4 {
+#github-lang-details:hover,
+#repimg1:hover,
+#repimg2:hover,
+#repimg3:hover,
+#repimg4:hover {
     transform: scale(1.05);
 }
 
 #particles-js {
     position: absolute;
-    z-index: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
+    top: 0;
+    left: 0;
+    z-index: -1; /* Set behind other content */
+  }
 
-#github-section{
-        position: absolute; 
-        z-index: 2; 
-}
-
-#particles-js{
-    background-color: black;
-}
-
-#github-contribution-chart{
+#github-section {
+    position: absolute;
     z-index: 2;
 }
 
-#recent-rep-title{
+#particles-js {
+    background-color: black;
+}
+
+#github-contribution-chart {
+    padding: 20px;
+    z-index: 2;
+    width: 100%;
+}
+
+#recent-rep-title {
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -58,12 +95,20 @@
     font-weight: 100px;
     font-size: 30px;
     padding-top: 15px;
+    margin-bottom: 30px;
 }
 
-#repimg1,#repimg2,#repimg3,#repimg4{
+#repimg1,
+#repimg2,
+#repimg3,
+#repimg4 {
     background: rgba(42, 104, 168, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     margin-bottom: 15px;
+}
+
+#recent-repos {
+    margin: 20px 10px 20px 10px;
 }

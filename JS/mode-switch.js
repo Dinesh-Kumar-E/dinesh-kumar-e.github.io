@@ -179,16 +179,19 @@ function github_profile(mode){
     let bg = document.getElementById("github-section");
     let title = document.getElementById("github-title");
     let recent = document.getElementById("recent-rep-title");
+    let chart = document.getElementById("github-contribution-title");
     if (mode === 'dark') {
-        bg.style.backgroundColor = 'transparent';
-        //bg.style.backgroundColor = 'black';
+        //bg.style.backgroundColor = 'transparent';
+        bg.style.backgroundColor = 'black';
         title.style.color = 'white';
         recent.style.color = 'white';
+        chart.style.color = 'white';
     } else {
         // bg.style.backgroundColor = 'transparent';
         bg.style.backgroundColor = 'white';
         title.style.color = 'black';
         recent.style.color = 'black';
+        chart.style.color = 'black';
     }
 }
 
