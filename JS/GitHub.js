@@ -39,7 +39,7 @@ async function fetchGitHubRepos() {
         let counter = 0;
 
         items.forEach((repo) => {
-            if (repo.name !== 'portfolio') {
+            if (repo.name !== 'dinesh-kumar-e.github.io') {
                 r[counter].src = getrepo_details + repo.name + "&theme=transparent";
                 console.log(r[counter].src);
                 counter++;
