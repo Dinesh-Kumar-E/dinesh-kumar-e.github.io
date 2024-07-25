@@ -70,8 +70,8 @@ function processLeetCodeStats(data) {
 async function fetchLeetCodeStats() {
     var element = document.getElementById("leetcode-title");
     try {
-        // const response = await fetch("https://leetcode-stats-api.herokuapp.com/dinesh-kumar-e");
-        const response = await fetch("https://bd344e05-8e08-4c42-8cc2-a95f4d005071.mock.pstmn.io");
+        const response = await fetch("https://leetcode-stats-api.herokuapp.com/dinesh-kumar-e");
+        //const response = await fetch("https://bd344e05-8e08-4c42-8cc2-a95f4d005071.mock.pstmn.io");
         console.log("response"+response.status);
         if (response.status == 200) {
             console.log("Success");
