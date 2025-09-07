@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cert-1",
+    "title": "CS50AI",
+    "issuer": "EDX (Harvard University)",
+    "date": "2022-Aug",
+    "link": "https://cs50.harvard.edu/certificates/73b162b5-9b73-4386-8d27-934a624cdda5"
+  },
+  {
+    "id": "cert-2",
+    "title": "CS50P",
+    "issuer": "EDX (Harvard University)",
+    "date": "2022-Nov",
+    "link": "https://cs50.harvard.edu/certificates/51e4f60b-72d1-4cb3-9a8c-bd2693d5523b"
+  },
+  {
+    "id": "cert-3",
+    "title": "OCI 2025 Certified Data Science Professional",
+    "issuer": "Oracle",
+    "date": "2025-Aug",
+    "link": "https://1drv.ms/b/c/732c37697d34b30f/EbM9VfSdO6hFgHFPM-n3uKwBr0dJNS3-1u8wLD4KLn_R6w?e=IbuXUV"
+  },
+  {
+    "id": "cert-4",
+    "title": "OCI 2025 Certified AI Foundations Associate",
+    "issuer": "Oracle",
+    "date": "2025-Aug",
+    "link": "https://cloud.google.com/certification/verify/789XYZ123"
+  }
+]

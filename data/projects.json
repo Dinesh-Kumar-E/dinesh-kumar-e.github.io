@@ -1,0 +1,54 @@
+[
+  {
+    "id": "proj-1",
+    "title": "No More Brainrot",
+    "tech": ["JavaScript", "HTML", "WebExtensions", "Firefox", "Manifest V2"],
+    "summary": "A powerful **Firefox extension** that blocks addictive content like YouTube Shorts and Instagram Reels, helping users reclaim their time from digital distractions. Features smart content blocking, statistics tracking, and customizable redirect URLs.",
+    "detail": "details/projects/proj-1.md",
+    "links": {
+      "github": "https://github.com/Dinesh-Kumar-E/No-More-Brainrot",
+      "demo": "https://addons.mozilla.org/en-US/firefox/addon/no-more-brainrot/"
+    }
+  },
+  {
+    "id": "proj-2", 
+    "title": "pyCHIP8-neo",
+    "tech": ["Python", "PyQt6", "Emulation", "CHIP-8", "UV Package Manager"],
+    "summary": "A modern **CHIP-8 emulator** built with Python and PyQt6, featuring a development GUI for debugging and ROM management. Supports classic games like Pong, Tetris, and includes step-by-step execution capabilities.",
+    "detail": "details/projects/proj-2.md",
+    "links": {
+      "github": "https://github.com/Dinesh-Kumar-E/pyCHIP8-neo"
+    }
+  },
+  {
+    "id": "proj-3",
+    "title": "QuizBuzz",
+    "tech": ["HTML", "JavaScript", "CSS", "MathJax", "JSON", "Pastebin API"],
+    "summary": "A modern, feature-rich **web-based quiz application** with retro aesthetics. Supports LaTeX math rendering, multi-select questions, real-time progress tracking, and includes tools for data management and slide generation.",
+    "detail": "details/projects/proj-3.md", 
+    "links": {
+      "github": "https://github.com/Dinesh-Kumar-E/Quizbuzz",
+      "demo": "https://dinesh-kumar-e.github.io/Quizbuzz/"
+    }
+  },
+  {
+    "id": "proj-4",
+    "title": "WordleAI",
+    "tech": ["Python", "FastAPI", "HTML", "CSS", "JavaScript", "Information Theory"],
+    "summary": "An intelligent **Wordle solver** that uses entropy-based algorithms and elimination strategies to solve word puzzles optimally. Features both CLI interface and web-based visualization with real-time probability calculations.",
+    "detail": "details/projects/proj-4.md",
+    "links": {
+      "github": "https://github.com/Dinesh-Kumar-E/WordleAI"
+    }
+  },
+  {
+    "id": "proj-5",
+    "title": "SafeJourney-AI",
+    "tech": ["Python", "OpenCV", "dlib", "Dash", "Plotly", "Computer Vision", "Machine Learning"],
+    "summary": "An advanced **driver drowsiness detection system** that uses machine learning and computer vision to analyze real-time camera feeds. Features facial landmark detection, EAR/MAR calculations, and live dashboard visualization.",
+    "detail": "details/projects/proj-5.md",
+    "links": {
+      "github": "https://github.com/Dinesh-Kumar-E/SafeJourney-AI"
+    }
+  }
+]

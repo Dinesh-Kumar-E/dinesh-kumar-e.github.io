@@ -1,0 +1,58 @@
+[
+  {
+    "id": "ach-1",
+    "title": "Winner - Smart India Hackathon 2024",
+    "summary": "<strong>Winner</strong> of Smart India Hackathon 2024 for developing a video call intercom system for individuals with hearing disabilities. The solution was proposed by <strong>ISLRTC</strong>, Ministry of Social Justice & Empowerment.",
+    "date": "2024-03-20",
+    "detail": "details/achievements/ach-1.md",
+    "link": "https://www.linkedin.com/posts/dinesh-kumar-e_innovation-sih2024-3ddesign-activity-7275797003983339521-NuiQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADazv-8BSPoggiCpEUquwE8OifgGtscdkAc"
+  },
+  {
+    "id": "ach-2",
+    "title": "National 11th Place - Amazon ML Challenge 2024",
+    "summary": "Secured <strong>11th place nationally</strong> in the Amazon ML Challenge 2024. Developed a solution to identify product parameters from a massive dataset of <strong>2.6 lakh images</strong>, achieving an F1 score of <strong>0.715</strong>.",
+    "date": "2024-06-15",
+    "detail": "details/achievements/ach-2.md",
+    "link": "https://www.linkedin.com/posts/dinesh-kumar-e_machinelearning-ai-amazonchallenge2024-activity-7247191827819175936-YsKn?utm_source=share&utm_medium=member_desktop&rcm=ACoAADazv-8BSPoggiCpEUquwE8OifgGtscdkAc"
+  },
+  {
+    "id": "ach-3",
+    "title": "Published Research Paper - Water Quality Modeling",
+    "summary": "Co-authored and published the research paper \"<strong>Water Quality Parameters Modeling of Thamirabarani River</strong>\". Utilized ML algorithms, achieving <strong>96% accuracy</strong> with Random Forest.",
+    "date": "2023-11-10",
+    "detail": "details/achievements/ach-3.md",
+    "link": "https://www.linkedin.com/posts/dinesh-kumar-e_ai-machinelearning-deeplearning-activity-7218271716291067904-S9uZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADazv-8BSPoggiCpEUquwE8OifgGtscdkAc"
+  },
+  {
+    "id": "ach-4",
+    "title": "IEEE \"Best Student Volunteer Award 2023\"",
+    "summary": "Received the prestigious <strong>IEEE \"Best Student Volunteer Award 2023\"</strong> in recognition of contributions and leadership as the Chairperson of the IEEE Engineering Medicine and Biology Society at Sairam.",
+    "date": "2023-12-05",
+    "detail": "details/achievements/ach-4.md",
+    "link": "https://www.linkedin.com/posts/dinesh-kumar-e_ieee-award-volunteer-activity-7166851548889763840-fwm0?utm_source=share&utm_medium=member_desktop&rcm=ACoAADazv-8BSPoggiCpEUquwE8OifgGtscdkAc"
+  },
+  {
+    "id": "ach-5",
+    "title": "2nd Place - IC Hack 2.0 National Hackathon",
+    "summary": "Secured the <strong>second position</strong> and a cash prize of ₹10,000 at the IC Hack 2.0 national hackathon. The project focused on <strong>Safety and Transportation</strong> using Computer Vision.",
+    "date": "2024-02-22",
+    "detail": "details/achievements/ach-5.md",
+    "link": "https://www.linkedin.com/posts/dinesh-kumar-e_ichack2-teaminnovation-hackathonwinners-activity-7147226460359958529-tTBX?utm_source=share&utm_medium=member_desktop&rcm=ACoAADazv-8BSPoggiCpEUquwE8OifgGtscdkAc"
+  },
+  {
+    "id": "ach-6",
+    "title": "2nd Runner-Up - Data Sprint Hackathon",
+    "summary": "Achieved the <strong>2nd runner-up</strong> position in the 24-hour \"Data Sprint\" hackathon. Developed a <strong>Medical Chat AI</strong> with disease detection from images and text-to-speech capabilities.",
+    "date": "2023-09-08",
+    "detail": "details/achievements/ach-6.md",
+    "link": "https://www.linkedin.com/posts/dinesh-kumar-e_hackathon-ai-machinelearning-activity-7111022397520060416-FakV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADazv-8BSPoggiCpEUquwE8OifgGtscdkAc"
+  },
+  {
+    "id": "ach-7",
+    "title": "2nd Place - SDG Ideathon 3.0",
+    "summary": "Secured <strong>2nd place</strong> in the SDG Ideathon 3.0 for a project focused on <strong>UN Goal 6 - Clean Water and Sanitation</strong>, demonstrating a commitment to sustainable development.",
+    "date": "2023-07-29",
+    "detail": "details/achievements/ach-7.md",
+    "link": "https://www.linkedin.com/posts/dinesh-kumar-e_innovation-team-sustainability-activity-7071869825676947456-QHWu?utm_source=share&utm_medium=member_desktop&rcm=ACoAADazv-8BSPoggiCpEUquwE8OifgGtscdkAc"
+  }
+]

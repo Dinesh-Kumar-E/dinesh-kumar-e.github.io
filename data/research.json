@@ -1,0 +1,20 @@
+[
+  {
+    "id": "res-1",
+    "title": "Smart Healthcare Assistant with Epidemiological Modelling",
+    "publisher": "IEEE ICPECTS",
+    "year": 2024,
+    "summary": "This paper introduces a hybrid system combining epidemiological models with AI techniques, including NLP and LLM-powered chatbots, to enhance epidemic modeling and healthcare accessibility.",
+    "doi": "10.1109/ICPECTS62210.2024.10780252",
+    "link": "https://ieeexplore.ieee.org/abstract/document/10780252"
+  },
+  {
+    "id": "res-2",
+    "title": "Water Quality Parameters Modeling of Thamirabarani River",
+    "publisher": "IEEE IConSCEPT",
+    "year": 2024,
+    "summary": "This study analyzes Thamirabarani River water quality using 28 parameters and machine learning algorithms to classify water into 5 Designated Best Use classes.",
+    "doi": "10.1109/IConSCEPT61884.2024.10627895",
+    "link": "https://ieeexplore.ieee.org/abstract/document/10627895"
+  }
+]

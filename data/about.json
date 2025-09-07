@@ -1,0 +1,21 @@
+{
+  "name": "Dinesh Kumar E",
+  "tagline": "ML Engineer | Software Developer | Researcher",
+  "bio": "I’m Dinesh Kumar E, a curious builder who loves turning ideas into reality through code. From experimenting with machine learning and language models to building clean, efficient web solutions, I enjoy working at the intersection of research and development. I love to learn new technologies, solving real-world problems, and share my work with the community. Outside of projects, I’m always exploring ways to push boundaries, simplify complexity, and create meaningful impact.",
+  "email": "dinesh_kumar_e@outlook.com",
+  "photo": "images/profile.webp",
+  "resume": "assets/resume.pdf",
+  "googleScholar": "https://scholar.google.com/citations?user=kv5B4I4AAAAJ&hl=en",
+  "codingProfiles": {
+    "leetcode": "https://leetcode.com/u/Dinesh-Kumar-E/",
+    "codeforces": "https://codeforces.com/profile/dinesh-kumar-e",
+    "codechef": "https://www.codechef.com/users/dinesh_kumar_e"
+  },
+  "socials": {
+    "github": "https://github.com/Dinesh-Kumar-E",
+    "linkedin": "https://www.linkedin.com/in/dinesh-kumar-e/",
+    "twitter": "https://twitter.com/Dinesh_Kumar_E",
+    "instagram": "https://instagram.com/dinesh.kumar_e",
+    "discord": "http://discordapp.com/users/1004274083455840266"
+  }
+}

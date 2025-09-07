@@ -1,0 +1,23 @@
+[
+  {
+    "id": "edu-1",
+    "degree": "B.Tech in Computer Science and Engineering (Artificial Intelligence & Machine Learning)",
+    "institution": "Sri Sairam Engineering College",
+    "year": "Current (2026)",
+    "grade": "8.77 CGPA"
+  },
+  {
+    "id": "edu-2",
+    "degree": "Higher Secondary Education (Computer Science)",
+    "institution": "Sri Sankara Vidyalaya",
+    "year": "2022",
+    "grade": "86.8%"
+  },
+  {
+    "id": "edu-3",
+    "degree": "High School Education",
+    "institution": "Sri Sankara Vidyalaya",
+    "year": "2020",
+    "grade": "80.6%"
+  }
+]

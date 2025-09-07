@@ -1,0 +1,16 @@
+[
+{
+    "id": "exp-1",
+    "role": "Software Developer Intern",
+    "company": "Genik Technologies",
+    "duration": "Aug 2024 - Nov 2024",
+    "description": "Developed a FastAPI-based microservice on an Oracle VPS to handle over 1000 concurrent requests, improved response times by 40% with persistent disk caching, and enforced rate limiting to maintain 99.9% uptime."
+},
+  {
+    "id": "exp-2",
+    "role": "Web Developer Intern",
+    "company": "SSC Max Academy",
+    "duration": "Jun 2024 - Jul 2024",
+    "description": "Built responsive web applications using React.js and Node.js. Implemented RESTful APIs and integrated third-party services. Collaborated with design team to create user-friendly interfaces and improved application performance by 30%."
+  }
+]
