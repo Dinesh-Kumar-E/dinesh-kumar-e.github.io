@@ -1,0 +1,130 @@
+[
+  {
+    "id": "1",
+    "company": "Tech Innovators Inc.",
+    "position": "Full Stack Developer",
+    "type": "full-time",
+    "duration": "Jan 2024 - Present",
+    "startDate": "2024-01",
+    "endDate": "Present",
+    "location": "Chennai, India",
+    "workMode": "hybrid",
+    "description": "Leading development of scalable web applications using modern tech stack. Collaborating with cross-functional teams to deliver high-quality software solutions that serve thousands of users daily.",
+    "achievements": [
+      "Developed and deployed 3 major web applications serving 10,000+ users",
+      "Reduced application load time by 40% through optimization techniques",
+      "Mentored 2 junior developers and conducted comprehensive code reviews",
+      "Implemented CI/CD pipelines reducing deployment time by 60%",
+      "Led migration to microservices architecture improving system scalability",
+      "Achieved 99.9% uptime for critical production systems"
+    ],
+    "technologies": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Redis",
+      "GraphQL",
+      "Jest"
+    ],
+    "responsibilities": [
+      "Design and develop responsive web applications using React and TypeScript",
+      "Collaborate with UX/UI designers for seamless user experiences",
+      "Optimize application performance and scalability using modern techniques",
+      "Write comprehensive unit and integration tests with 90%+ coverage",
+      "Participate in agile development processes and sprint planning",
+      "Review code and mentor junior developers",
+      "Deploy and maintain applications on AWS cloud infrastructure"
+    ],
+    "companyUrl": "https://techinnovators.com",
+    "current": true,
+    "logo": "./Assets/company-logo-1.png"
+  },
+  {
+    "id": "2",
+    "company": "StartupXYZ",
+    "position": "Frontend Developer Intern",
+    "type": "internship",
+    "duration": "Jun 2023 - Dec 2023",
+    "startDate": "2023-06",
+    "endDate": "2023-12",
+    "location": "Bangalore, India",
+    "workMode": "onsite",
+    "description": "Contributed to the development of the company's main product, a SaaS platform for small businesses. Worked closely with the product team to implement new features and improve user experience.",
+    "achievements": [
+      "Built responsive dashboard components used by 5,000+ users",
+      "Improved user engagement by 25% through UI/UX enhancements",
+      "Contributed to a 15% increase in conversion rates",
+      "Received 'Outstanding Intern' award for exceptional performance",
+      "Implemented real-time data visualization features",
+      "Reduced bundle size by 30% through code optimization"
+    ],
+    "technologies": [
+      "Vue.js",
+      "JavaScript",
+      "CSS3",
+      "SASS",
+      "REST APIs",
+      "Git",
+      "Webpack",
+      "Chart.js",
+      "Bootstrap"
+    ],
+    "responsibilities": [
+      "Develop user-facing features using Vue.js framework",
+      "Integrate frontend with backend APIs seamlessly",
+      "Ensure cross-browser compatibility across all major browsers",
+      "Participate in daily standups and sprint planning sessions",
+      "Collaborate with design team for pixel-perfect implementations",
+      "Conduct user testing and gather feedback for improvements",
+      "Document code and maintain technical specifications"
+    ],
+    "companyUrl": "https://startupxyz.com",
+    "current": false,
+    "logo": "./Assets/company-logo-2.png"
+  },
+  {
+    "id": "3",
+    "company": "Freelance",
+    "position": "Web Developer",
+    "type": "freelance",
+    "duration": "Jan 2023 - May 2023",
+    "startDate": "2023-01",
+    "endDate": "2023-05",
+    "location": "Remote",
+    "workMode": "remote",
+    "description": "Provided comprehensive web development services to small businesses and startups. Specialized in creating modern, responsive websites and web applications tailored to client needs.",
+    "achievements": [
+      "Completed 8 successful projects with 100% client satisfaction",
+      "Generated $15,000+ in revenue during the period",
+      "Built portfolio website that increased client inquiries by 200%",
+      "Established long-term partnerships with 3 recurring clients",
+      "Delivered all projects ahead of schedule",
+      "Achieved average page load time under 2 seconds for all sites"
+    ],
+    "technologies": [
+      "React",
+      "Next.js",
+      "WordPress",
+      "PHP",
+      "MySQL",
+      "Tailwind CSS",
+      "Vercel",
+      "Figma"
+    ],
+    "responsibilities": [
+      "Gather requirements and provide technical consultations to clients",
+      "Design and develop custom websites from scratch",
+      "Provide ongoing maintenance and support services",
+      "Optimize websites for SEO and performance",
+      "Train clients on content management systems",
+      "Handle domain setup and hosting configurations",
+      "Ensure responsive design across all devices"
+    ],
+    "current": false,
+    "logo": "./Assets/freelance-logo.png"
+  }
+]

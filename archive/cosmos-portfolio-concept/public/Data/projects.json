@@ -1,0 +1,61 @@
+[
+  {
+    "id": "ai-chatbot",
+    "title": "AI Conversational Chatbot",
+    "summary": "Intelligent chatbot built with transformer models and natural language processing for customer support automation.",
+    "description": "# AI Conversational Chatbot\n\nA sophisticated conversational AI chatbot developed using state-of-the-art transformer models. The system incorporates advanced natural language processing techniques to provide intelligent, context-aware responses for customer support scenarios.\n\n## Key Features\n- **Advanced NLP**: Utilizes transformer-based models for understanding context and intent\n- **Multi-turn Conversations**: Maintains conversation history and context across multiple interactions\n- **Sentiment Analysis**: Real-time sentiment detection to adapt response tone\n- **Integration Ready**: RESTful API for easy integration with existing systems\n- **Scalable Architecture**: Built with microservices for high availability and scalability\n\n## Technical Implementation\n- Fine-tuned BERT/GPT models for domain-specific responses\n- Vector database for semantic search and retrieval\n- Real-time response generation with sub-second latency\n- Comprehensive logging and analytics dashboard\n\n## Impact\n- 40% reduction in customer support response time\n- 85% customer satisfaction rate\n- Handles 1000+ concurrent conversations",
+    "image": "/Assets/projects/chatbot.png",
+    "tech": ["Python", "PyTorch", "Transformers", "Flask", "Redis", "Docker"],
+    "links": {
+      "github": "https://github.com/Dinesh-Kumar-E/ai-chatbot",
+      "demo": "https://chatbot-demo.dineshkumar.dev"
+    },
+    "featured": true,
+    "status": "completed",
+    "date": "2024-08-15"
+  },
+  {
+    "id": "portfolio-cosmos",
+    "title": "Cosmos Portfolio Website",
+    "summary": "Modern, responsive portfolio website with cosmic theme, parallax effects, and smooth animations built with React and Framer Motion.",
+    "description": "# Cosmos Portfolio Website\n\nA stunning, interactive portfolio website featuring a cosmic theme with parallax scrolling effects, smooth animations, and responsive design. Built with modern web technologies to showcase projects, skills, and achievements.\n\n## Design Features\n- **Cosmic Theme**: Deep space background with twinkling stars and meteor effects\n- **Parallax Scrolling**: Immersive depth and movement effects\n- **Smooth Animations**: Framer Motion powered transitions and micro-interactions\n- **Glassmorphism UI**: Modern, semi-transparent card designs with glowing borders\n- **Responsive Design**: Optimized for mobile, tablet, and desktop devices\n\n## Technical Stack\n- React 18 with TypeScript for type safety\n- Tailwind CSS for utility-first styling\n- Framer Motion for advanced animations\n- JSON-driven content management\n- Optimized build with Vite\n\n## Performance\n- Lighthouse score: 95+ across all metrics\n- Lazy loading for optimal performance\n- SEO optimized with meta tags",
+    "image": "/Assets/projects/portfolio.png",
+    "tech": ["React", "TypeScript", "TailwindCSS", "Framer Motion", "Vite"],
+    "links": {
+      "github": "https://github.com/Dinesh-Kumar-E/cosmos-portfolio",
+      "demo": "https://dineshkumar.dev"
+    },
+    "featured": true,
+    "status": "completed",
+    "date": "2024-09-06"
+  },
+  {
+    "id": "ml-image-classifier",
+    "title": "Advanced Image Classification System",
+    "summary": "Deep learning model for multi-class image classification with 94% accuracy using custom CNN architecture and transfer learning.",
+    "description": "# Advanced Image Classification System\n\nA robust image classification system capable of identifying and categorizing images across multiple classes with high accuracy. Combines custom CNN architecture with transfer learning techniques.\n\n## Model Architecture\n- Custom CNN with residual connections\n- Transfer learning from ResNet-50 backbone\n- Data augmentation pipeline for improved generalization\n- Multi-scale feature extraction\n\n## Performance Metrics\n- **Accuracy**: 94.2% on test dataset\n- **F1 Score**: 0.93 across all classes\n- **Inference Time**: <50ms per image\n- **Model Size**: Optimized to 12MB for deployment\n\n## Deployment\n- Containerized with Docker for easy deployment\n- REST API with FastAPI\n- GPU acceleration support\n- Batch processing capabilities",
+    "image": "/Assets/projects/image-classifier.png",
+    "tech": ["Python", "TensorFlow", "OpenCV", "FastAPI", "Docker", "NumPy"],
+    "links": {
+      "github": "https://github.com/Dinesh-Kumar-E/image-classifier",
+      "demo": "https://classifier-demo.dineshkumar.dev"
+    },
+    "featured": true,
+    "status": "completed",
+    "date": "2024-07-22"
+  },
+  {
+    "id": "web-scraping-tool",
+    "title": "Intelligent Web Scraping Framework",
+    "summary": "Scalable web scraping framework with anti-detection measures, data validation, and automated pipeline for large-scale data extraction.",
+    "description": "# Intelligent Web Scraping Framework\n\nA comprehensive web scraping solution designed for large-scale data extraction with built-in anti-detection measures and intelligent parsing capabilities.\n\n## Core Features\n- **Anti-Detection**: Rotating proxies, user agents, and request delays\n- **Smart Parsing**: AI-powered content extraction and validation\n- **Scalable Architecture**: Distributed processing with Celery and Redis\n- **Data Pipeline**: Automated ETL pipeline with data cleaning and validation\n- **Monitoring**: Real-time scraping metrics and error tracking\n\n## Technical Highlights\n- Handles JavaScript-heavy sites with Playwright\n- Custom retry logic with exponential backoff\n- Data quality validation and duplicate detection\n- Supports multiple output formats (JSON, CSV, Database)\n\n## Performance\n- Processes 10,000+ pages per hour\n- 99.5% success rate across different websites\n- Automatic error recovery and resumption",
+    "image": "/Assets/projects/web-scraper.png",
+    "tech": ["Python", "Selenium", "Playwright", "Celery", "Redis", "PostgreSQL"],
+    "links": {
+      "github": "https://github.com/Dinesh-Kumar-E/web-scraping-framework"
+    },
+    "featured": false,
+    "status": "completed",
+    "date": "2024-06-10"
+  }
+]

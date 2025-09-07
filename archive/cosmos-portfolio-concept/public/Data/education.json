@@ -1,0 +1,67 @@
+[
+  {
+    "id": "1",
+    "institution": "Sri Venkateswara College of Engineering",
+    "degree": "Bachelor of Technology",
+    "field": "Computer Science and Engineering",
+    "duration": "2020 - 2024",
+    "startYear": "2020",
+    "endYear": "2024",
+    "grade": "8.5 CGPA",
+    "description": "Specialized in software engineering, data structures, algorithms, and machine learning. Completed major projects in web development and AI with focus on full-stack development and modern frameworks.",
+    "achievements": [
+      "Dean's List for 3 consecutive semesters",
+      "Best Project Award for Final Year Project on AI-powered Portfolio System",
+      "Active member of Programming Club and Technical Society",
+      "Participated in multiple hackathons and coding competitions",
+      "Published research paper on Machine Learning applications"
+    ],
+    "coursework": [
+      "Data Structures & Algorithms",
+      "Database Management Systems",
+      "Machine Learning & AI",
+      "Software Engineering",
+      "Computer Networks",
+      "Operating Systems",
+      "Web Development",
+      "Mobile App Development",
+      "Cloud Computing",
+      "Cybersecurity"
+    ],
+    "location": "Chennai, India",
+    "type": "university",
+    "status": "completed",
+    "logo": "./Assets/university-logo.png"
+  },
+  {
+    "id": "2",
+    "institution": "Kendriya Vidyalaya",
+    "degree": "Higher Secondary Certificate",
+    "field": "Computer Science",
+    "duration": "2018 - 2020",
+    "startYear": "2018",
+    "endYear": "2020",
+    "grade": "95%",
+    "description": "Focused on mathematics, physics, chemistry, and computer science fundamentals. Developed strong analytical and problem-solving skills with emphasis on programming and logical thinking.",
+    "achievements": [
+      "School Topper in Computer Science with 98% marks",
+      "Science Fair Winner for innovative project on IoT",
+      "Mathematics Olympiad Regional Qualifier",
+      "Student Council Technology Head",
+      "Led school's first coding workshop for juniors"
+    ],
+    "coursework": [
+      "Mathematics",
+      "Physics", 
+      "Chemistry",
+      "Computer Science",
+      "English",
+      "Programming in C++",
+      "Database Concepts"
+    ],
+    "location": "Chennai, India",
+    "type": "college",
+    "status": "completed",
+    "logo": "./Assets/school-logo.png"
+  }
+]
