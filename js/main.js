@@ -316,8 +316,8 @@ class Portfolio {
             if (section) {
                 const heading = section.querySelector('h2');
                 if (heading && !heading.querySelector('.section-link-icon')) {
-                    const linkIcon = document.createElement('span');
-                    linkIcon.className = 'section-link-icon material-symbols-outlined';
+                    const linkIcon = document.createElement('i');
+                    linkIcon.className = 'material-symbols-outlined section-link-icon';
                     linkIcon.textContent = 'link';
                     linkIcon.title = `Link to ${heading.textContent} section`;
                     linkIcon.style.cursor = 'pointer';
@@ -326,11 +326,14 @@ class Portfolio {
                         // Copy link to clipboard
                         const url = window.location.origin + window.location.pathname + `#${sectionId}`;
                         navigator.clipboard.writeText(url).then(() => {
-                            // Visual feedback
-                            linkIcon.textContent = 'check';
+                            // Visual feedback - smooth icon transition
+                            linkIcon.textContent = 'done';
+                            linkIcon.style.color = '#28a745'; // Green color for success
                             setTimeout(() => {
                                 linkIcon.textContent = 'link';
-                            }, 1000);
+                                linkIcon.style.color = ''; // Reset to original color
+                            }, 1500);
+                            this.showTooltip('Section link copied!');
                         }).catch(() => {
                             // Fallback: scroll to section
                             section.scrollIntoView({ behavior: 'smooth' });
@@ -371,11 +374,13 @@ class Portfolio {
                     
                     // Visual feedback - change icon temporarily
                     const icon = copyBtn.querySelector('i');
-                    const originalClass = icon.className;
-                    icon.className = 'fa-solid fa-check';
+                    const originalText = icon.textContent;
+                    icon.textContent = 'done';
+                    icon.style.color = '#28a745'; // Green color for success
                     
                     setTimeout(() => {
-                        icon.className = originalClass;
+                        icon.textContent = originalText;
+                        icon.style.color = ''; // Reset to original color
                     }, 2000);
                 } catch (err) {
                     // Fallback for browsers that don't support clipboard API
@@ -402,11 +407,13 @@ class Portfolio {
                     
                     // Visual feedback - change icon temporarily
                     const icon = copyBtn.querySelector('i');
-                    const originalClass = icon.className;
-                    icon.className = 'fa-solid fa-check';
+                    const originalText = icon.textContent;
+                    icon.textContent = 'done';
+                    icon.style.color = '#28a745'; // Green color for success
                     
                     setTimeout(() => {
-                        icon.className = originalClass;
+                        icon.textContent = originalText;
+                        icon.style.color = ''; // Reset to original color
                     }, 2000);
                 } catch (err) {
                     // Fallback for browsers that don't support clipboard API
@@ -527,8 +534,8 @@ class Portfolio {
         card.id = project.id;
 
         const copyBtn = document.createElement('button');
-        copyBtn.className = 'copy-link material-symbols-outlined';
-        copyBtn.textContent = 'link';
+        copyBtn.className = 'copy-link';
+        copyBtn.innerHTML = '<i class="material-symbols-outlined">link</i>';
         copyBtn.title = 'Copy link';
         copyBtn.onclick = () => this.copyLink(project.id);
 
@@ -656,8 +663,8 @@ class Portfolio {
             card.id = item.id;
 
             const copyBtn = document.createElement('button');
-            copyBtn.className = 'copy-link material-symbols-outlined';
-            copyBtn.textContent = 'link';
+            copyBtn.className = 'copy-link';
+            copyBtn.innerHTML = '<i class="material-symbols-outlined">link</i>';
             copyBtn.title = 'Copy link';
             copyBtn.onclick = () => this.copyLink(item.id);
 
@@ -711,8 +718,8 @@ class Portfolio {
             card.id = item.id;
 
             const copyBtn = document.createElement('button');
-            copyBtn.className = 'copy-link material-symbols-outlined';
-            copyBtn.textContent = 'link';
+            copyBtn.className = 'copy-link';
+            copyBtn.innerHTML = '<i class="material-symbols-outlined">link</i>';
             copyBtn.title = 'Copy link';
             copyBtn.onclick = () => this.copyLink(item.id);
 
@@ -795,8 +802,8 @@ class Portfolio {
             card.id = item.id;
 
             const copyBtn = document.createElement('button');
-            copyBtn.className = 'copy-link material-symbols-outlined';
-            copyBtn.textContent = 'link';
+            copyBtn.className = 'copy-link';
+            copyBtn.innerHTML = '<i class="material-symbols-outlined">link</i>';
             copyBtn.title = 'Copy link';
             copyBtn.onclick = () => this.copyLink(item.id);
 
@@ -996,16 +1003,20 @@ class Portfolio {
     copyLink(id) {
         const url = `${window.location.origin}${window.location.pathname}#${id}`;
         const copyBtn = document.querySelector(`#${id} .copy-link`);
+        const icon = copyBtn ? copyBtn.querySelector('i') : null;
         
         if (navigator.clipboard) {
             navigator.clipboard.writeText(url).then(() => {
                 this.showTooltip('Link copied!');
-                // Visual feedback
-                if (copyBtn) {
-                    copyBtn.textContent = 'check';
+                // Visual feedback with smooth icon transition
+                if (icon) {
+                    const originalText = icon.textContent;
+                    icon.textContent = 'done';
+                    icon.style.color = '#28a745'; // Green color for success
                     setTimeout(() => {
-                        copyBtn.textContent = 'link';
-                    }, 1000);
+                        icon.textContent = originalText;
+                        icon.style.color = ''; // Reset to original color
+                    }, 1500);
                 }
             });
         } else {
@@ -1017,12 +1028,15 @@ class Portfolio {
             try {
                 document.execCommand('copy');
                 this.showTooltip('Link copied!');
-                // Visual feedback
-                if (copyBtn) {
-                    copyBtn.textContent = 'check';
+                // Visual feedback with smooth icon transition
+                if (icon) {
+                    const originalText = icon.textContent;
+                    icon.textContent = 'done';
+                    icon.style.color = '#28a745'; // Green color for success
                     setTimeout(() => {
-                        copyBtn.textContent = 'link';
-                    }, 1000);
+                        icon.textContent = originalText;
+                        icon.style.color = ''; // Reset to original color
+                    }, 1500);
                 }
             } catch (err) {
                 console.error('Could not copy link');
