@@ -16,6 +16,7 @@ class Portfolio {
         this.setupNavigation();
         this.setupSmoothScrolling();
         this.setupContactForm();
+        this.setupVisitorCounter();
         this.renderAllSections();
     }
 
@@ -217,6 +218,66 @@ class Portfolio {
                 }, 5000);
             }
         });
+    }
+
+    // Setup visitor counter
+    setupVisitorCounter() {
+        // Check if user has visited before
+        const previousVisitor = localStorage.getItem('previousVisitor');
+        let shouldIncrement = !previousVisitor;
+
+        // Set previousVisitor flag
+        if (!previousVisitor) {
+            localStorage.setItem('previousVisitor', 'true');
+        }
+
+        // Get current visitor count first
+        this.fetchVisitorCount().then(currentCount => {
+            const visitorCountElement = document.getElementById('visitor-count');
+            if (visitorCountElement) {
+                visitorCountElement.textContent = currentCount;
+            }
+        });
+
+        // If new visitor, increment after 5 seconds
+        if (shouldIncrement) {
+            setTimeout(() => {
+                this.incrementVisitorCount();
+            }, 5000);
+        }
+    }
+
+    // Fetch current visitor count
+    async fetchVisitorCount() {
+        try {
+            const response = await fetch('https://abacus.jasoncameron.dev/hit/dinesh-kumar-e.github.io/visits');
+            if (response.ok) {
+                const data = await response.json();
+                return data.value || data;
+            }
+        } catch (error) {
+            console.error('Error fetching visitor count:', error);
+        }
+        return '---';
+    }
+
+    // Increment visitor count
+    async incrementVisitorCount() {
+        try {
+            const response = await fetch('https://abacus.jasoncameron.dev/hit/dinesh-kumar-e.github.io/visits', {
+                method: 'POST'
+            });
+            if (response.ok) {
+                const data = await response.json();
+                const newCount = data.value || data;
+                const visitorCountElement = document.getElementById('visitor-count');
+                if (visitorCountElement) {
+                    visitorCountElement.textContent = newCount;
+                }
+            }
+        } catch (error) {
+            console.error('Error incrementing visitor count:', error);
+        }
     }
 
     // Render all sections
