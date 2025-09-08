@@ -1140,10 +1140,6 @@ main {
         padding: 0 16px;
     }
 
-    .footer-left {
-        align-items: center;
-    }
-
     .footer-socials {
         gap: 20px;
         justify-content: center;
@@ -1210,29 +1206,10 @@ main {
     gap: 24px;
 }
 
-.footer-left {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
 .footer-content p {
     margin: 0;
     color: #666;
     font-size: 0.85rem;
-}
-
-.visitor-counter {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #666;
-    font-size: 0.8rem;
-}
-
-.visitor-counter i {
-    font-size: 14px;
-    opacity: 0.8;
 }
 
 .footer-socials {
