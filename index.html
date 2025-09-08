@@ -143,13 +143,22 @@
         <!-- Landing/Hero Section -->
         <section id="landing" class="section">
             <div class="hero-content">
-                <h1 id="hero-name"></h1>
-                <p id="hero-tagline"></p>
-                <div class="hero-email-container">
-                    <span id="hero-email"></span>
-                    <button id="copy-email-btn" class="copy-email-btn" title="Copy email">
-                        <i class="fa-solid fa-copy"></i>
-                    </button>
+                <!-- Skeleton Loading -->
+                <div id="hero-skeleton" class="skeleton-hero">
+                    <h1 class="skeleton"></h1>
+                    <p class="skeleton"></p>
+                    <div class="hero-email-container skeleton"></div>
+                </div>
+                <!-- Actual Content -->
+                <div id="hero-content" class="skeleton-hidden">
+                    <h1 id="hero-name"></h1>
+                    <p id="hero-tagline"></p>
+                    <div class="hero-email-container">
+                        <span id="hero-email"></span>
+                        <button id="copy-email-btn" class="copy-email-btn" title="Copy email">
+                            <i class="fa-solid fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -157,13 +166,31 @@
         <!-- About Section -->
         <section id="about" class="section">
             <h2>About</h2>
-            <div class="about-content">
-                <div class="about-photo">
-                    <img id="profile-photo" src="" alt="Profile Photo">
+            <div class="about-container">
+                <!-- Skeleton Loading -->
+                <div id="about-skeleton" class="skeleton-about">
+                    <div class="skeleton-about-photo skeleton"></div>
+                    <div class="skeleton-about-text">
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-social">
+                            <div class="skeleton-social-item skeleton"></div>
+                            <div class="skeleton-social-item skeleton"></div>
+                            <div class="skeleton-social-item skeleton"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-text">
-                    <p id="bio-text"></p>
-                    <div class="social-links" id="social-links"></div>
+                <!-- Actual Content -->
+                <div id="about-content" class="about-content skeleton-hidden">
+                    <div class="about-photo">
+                        <img id="profile-photo" src="" alt="Profile Photo">
+                    </div>
+                    <div class="about-text">
+                        <p id="bio-text"></p>
+                        <div class="social-links" id="social-links"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -171,73 +198,288 @@
         <!-- Tech Stack Section -->
         <section id="techstack" class="section">
             <h2>Tech Stack</h2>
-            <div id="techstack-content"></div>
+            <!-- Skeleton Loading -->
+            <div id="techstack-skeleton" class="skeleton-tech">
+                <div class="skeleton-tech-category">
+                    <div class="skeleton-tech-title skeleton"></div>
+                    <div class="skeleton-tech-skills">
+                        <div class="skeleton-tech-skill skeleton"></div>
+                        <div class="skeleton-tech-skill skeleton"></div>
+                        <div class="skeleton-tech-skill skeleton"></div>
+                        <div class="skeleton-tech-skill skeleton"></div>
+                    </div>
+                </div>
+                <div class="skeleton-tech-category">
+                    <div class="skeleton-tech-title skeleton"></div>
+                    <div class="skeleton-tech-skills">
+                        <div class="skeleton-tech-skill skeleton"></div>
+                        <div class="skeleton-tech-skill skeleton"></div>
+                        <div class="skeleton-tech-skill skeleton"></div>
+                        <div class="skeleton-tech-skill skeleton"></div>
+                        <div class="skeleton-tech-skill skeleton"></div>
+                    </div>
+                </div>
+                <div class="skeleton-tech-category">
+                    <div class="skeleton-tech-title skeleton"></div>
+                    <div class="skeleton-tech-skills">
+                        <div class="skeleton-tech-skill skeleton"></div>
+                        <div class="skeleton-tech-skill skeleton"></div>
+                        <div class="skeleton-tech-skill skeleton"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Actual Content -->
+            <div id="techstack-content" class="skeleton-hidden"></div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects" class="section">
             <h2>Projects</h2>
-            <div id="projects-content"></div>
-            <div class="pagination" id="projects-pagination"></div>
+            <!-- Skeleton Loading -->
+            <div id="projects-skeleton">
+                <div class="skeleton-card">
+                    <div class="skeleton-card-title skeleton"></div>
+                    <div class="skeleton-card-tech">
+                        <div class="skeleton-card-tech-tag skeleton"></div>
+                        <div class="skeleton-card-tech-tag skeleton"></div>
+                        <div class="skeleton-card-tech-tag skeleton"></div>
+                    </div>
+                    <div class="skeleton-card-summary">
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                    </div>
+                    <div class="skeleton-card-links">
+                        <div class="skeleton-card-link skeleton"></div>
+                        <div class="skeleton-card-link skeleton"></div>
+                    </div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-card-title skeleton"></div>
+                    <div class="skeleton-card-tech">
+                        <div class="skeleton-card-tech-tag skeleton"></div>
+                        <div class="skeleton-card-tech-tag skeleton"></div>
+                        <div class="skeleton-card-tech-tag skeleton"></div>
+                    </div>
+                    <div class="skeleton-card-summary">
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                    </div>
+                    <div class="skeleton-card-links">
+                        <div class="skeleton-card-link skeleton"></div>
+                        <div class="skeleton-card-link skeleton"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Actual Content -->
+            <div id="projects-content" class="skeleton-hidden"></div>
+            <div class="pagination skeleton-hidden" id="projects-pagination"></div>
         </section>
 
         <!-- Research Section -->
         <section id="research" class="section">
             <div class="research-header">
                 <h2>Research</h2>
-                <a href="#" id="google-scholar-link" target="_blank" rel="noopener noreferrer" class="scholar-link">
+                <a href="#" id="google-scholar-link" target="_blank" rel="noopener noreferrer" class="scholar-link skeleton-hidden">
                     <i class="fa-brands fa-google-scholar"></i>
                     <span>Google Scholar</span>
                 </a>
             </div>
-            <div id="research-content"></div>
-            <div class="pagination" id="research-pagination"></div>
+            <!-- Skeleton Loading -->
+            <div id="research-skeleton">
+                <div class="skeleton-card">
+                    <div class="skeleton-card-title skeleton"></div>
+                    <div class="skeleton-card-meta skeleton"></div>
+                    <div class="skeleton-card-summary">
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                    </div>
+                    <div class="skeleton-card-links">
+                        <div class="skeleton-card-link skeleton"></div>
+                        <div class="skeleton-card-link skeleton"></div>
+                    </div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-card-title skeleton"></div>
+                    <div class="skeleton-card-meta skeleton"></div>
+                    <div class="skeleton-card-summary">
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                    </div>
+                    <div class="skeleton-card-links">
+                        <div class="skeleton-card-link skeleton"></div>
+                        <div class="skeleton-card-link skeleton"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Actual Content -->
+            <div id="research-content" class="skeleton-hidden"></div>
+            <div class="pagination skeleton-hidden" id="research-pagination"></div>
         </section>
 
         <!-- Achievements Section -->
         <section id="achievements" class="section">
             <h2>Achievements</h2>
-            <div id="achievements-content"></div>
-            <div class="pagination" id="achievements-pagination"></div>
+            <!-- Skeleton Loading -->
+            <div id="achievements-skeleton">
+                <div class="skeleton-card">
+                    <div class="skeleton-card-title skeleton"></div>
+                    <div class="skeleton-card-meta skeleton"></div>
+                    <div class="skeleton-card-summary">
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                    </div>
+                    <div class="skeleton-card-links">
+                        <div class="skeleton-card-link skeleton"></div>
+                        <div class="skeleton-card-link skeleton"></div>
+                    </div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-card-title skeleton"></div>
+                    <div class="skeleton-card-meta skeleton"></div>
+                    <div class="skeleton-card-summary">
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                        <div class="skeleton-line skeleton"></div>
+                    </div>
+                    <div class="skeleton-card-links">
+                        <div class="skeleton-card-link skeleton"></div>
+                        <div class="skeleton-card-link skeleton"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Actual Content -->
+            <div id="achievements-content" class="skeleton-hidden"></div>
+            <div class="pagination skeleton-hidden" id="achievements-pagination"></div>
         </section>
 
         <!-- Experience Section -->
         <section id="experience" class="section">
             <h2>Experience</h2>
-            <div id="experience-content" class="timeline"></div>
+            <!-- Skeleton Loading -->
+            <div id="experience-skeleton" class="timeline">
+                <div class="skeleton-timeline-item">
+                    <div class="skeleton-timeline-title skeleton"></div>
+                    <div class="skeleton-timeline-meta skeleton"></div>
+                    <div class="skeleton-timeline-desc skeleton"></div>
+                </div>
+                <div class="skeleton-timeline-item">
+                    <div class="skeleton-timeline-title skeleton"></div>
+                    <div class="skeleton-timeline-meta skeleton"></div>
+                    <div class="skeleton-timeline-desc skeleton"></div>
+                </div>
+                <div class="skeleton-timeline-item">
+                    <div class="skeleton-timeline-title skeleton"></div>
+                    <div class="skeleton-timeline-meta skeleton"></div>
+                    <div class="skeleton-timeline-desc skeleton"></div>
+                </div>
+            </div>
+            <!-- Actual Content -->
+            <div id="experience-content" class="timeline skeleton-hidden"></div>
         </section>
 
         <!-- Certifications Section -->
         <section id="certifications" class="section">
             <h2>Certifications</h2>
-            <div id="certifications-content"></div>
-            <div class="pagination" id="certifications-pagination"></div>
+            <!-- Skeleton Loading -->
+            <div id="certifications-skeleton">
+                <div class="skeleton-card">
+                    <div class="skeleton-card-title skeleton"></div>
+                    <div class="skeleton-card-meta skeleton"></div>
+                    <div class="skeleton-card-links">
+                        <div class="skeleton-card-link skeleton"></div>
+                    </div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-card-title skeleton"></div>
+                    <div class="skeleton-card-meta skeleton"></div>
+                    <div class="skeleton-card-links">
+                        <div class="skeleton-card-link skeleton"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Actual Content -->
+            <div id="certifications-content" class="skeleton-hidden"></div>
+            <div class="pagination skeleton-hidden" id="certifications-pagination"></div>
         </section>
 
         <!-- Profiles & Stats Section -->
         <section id="profiles" class="section">
             <h2>Profiles & Stats</h2>
-            <div id="profiles-content"></div>
+            <!-- Skeleton Loading -->
+            <div id="profiles-skeleton">
+                <div class="skeleton-profile-card">
+                    <div class="skeleton-profile-title skeleton"></div>
+                    <div class="skeleton-profile-link skeleton"></div>
+                </div>
+                <div class="skeleton-profile-card">
+                    <div class="skeleton-profile-title skeleton"></div>
+                    <div class="skeleton-profile-link skeleton"></div>
+                </div>
+                <div class="skeleton-profile-card">
+                    <div class="skeleton-profile-title skeleton"></div>
+                    <div class="skeleton-profile-link skeleton"></div>
+                </div>
+            </div>
+            <!-- Actual Content -->
+            <div id="profiles-content" class="skeleton-hidden"></div>
         </section>
 
         <!-- Education Section -->
         <section id="education" class="section">
             <h2>Education</h2>
-            <div id="education-content" class="timeline"></div>
+            <!-- Skeleton Loading -->
+            <div id="education-skeleton" class="timeline">
+                <div class="skeleton-timeline-item">
+                    <div class="skeleton-timeline-title skeleton"></div>
+                    <div class="skeleton-timeline-meta skeleton"></div>
+                    <div class="skeleton-timeline-desc skeleton"></div>
+                </div>
+                <div class="skeleton-timeline-item">
+                    <div class="skeleton-timeline-title skeleton"></div>
+                    <div class="skeleton-timeline-meta skeleton"></div>
+                    <div class="skeleton-timeline-desc skeleton"></div>
+                </div>
+            </div>
+            <!-- Actual Content -->
+            <div id="education-content" class="timeline skeleton-hidden"></div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="section">
             <h2>Contact</h2>
             <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-email-container">
-                        <span>Email: <span id="contact-email"></span></span>
-                        <button id="copy-contact-email-btn" class="copy-email-btn" title="Copy email">
-                            <i class="fa-solid fa-copy"></i>
-                        </button>
+                <!-- Skeleton Loading -->
+                <div id="contact-skeleton" class="skeleton-hidden">
+                    <div class="contact-info">
+                        <div class="contact-email-container">
+                            <div class="skeleton" style="height: 20px; width: 250px; margin-bottom: 16px;"></div>
+                        </div>
+                        <div class="contact-social">
+                            <div class="skeleton-social">
+                                <div class="skeleton-social-item skeleton"></div>
+                                <div class="skeleton-social-item skeleton"></div>
+                                <div class="skeleton-social-item skeleton"></div>
+                                <div class="skeleton-social-item skeleton"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-social" id="contact-social"></div>
+                </div>
+                <!-- Actual Content -->
+                <div id="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-email-container">
+                            <span>Email: <span id="contact-email"></span></span>
+                            <button id="copy-contact-email-btn" class="copy-email-btn" title="Copy email">
+                                <i class="fa-solid fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="contact-social" id="contact-social"></div>
+                    </div>
                 </div>
                 <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSeTJxiSZtpFDvBzBXVww9Xwwbtc6axugEy5dHeHEoRb5wRZ0w/viewform?embedded=true"

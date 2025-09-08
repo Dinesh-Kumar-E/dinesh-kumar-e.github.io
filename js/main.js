@@ -40,6 +40,9 @@ class Portfolio {
             'achievements', 'certifications', 'experience', 'education'
         ];
 
+        // Show loading state initially
+        this.showSkeletonLoaders();
+
         for (const file of dataFiles) {
             this.allData[file] = await this.fetchJSON(`data/${file}.json`);
         }
@@ -49,6 +52,73 @@ class Portfolio {
             config.profiles.github = this.allData.about.socials.github || '';
             config.profiles.linkedin = this.allData.about.socials.linkedin || '';
         }
+
+        // Hide skeleton loaders after data is loaded
+        this.hideSkeletonLoaders();
+    }
+
+    // Show skeleton loaders
+    showSkeletonLoaders() {
+        const skeletonElements = [
+            'hero-skeleton', 'about-skeleton', 'techstack-skeleton', 
+            'projects-skeleton', 'research-skeleton', 'achievements-skeleton',
+            'experience-skeleton', 'certifications-skeleton', 'profiles-skeleton',
+            'education-skeleton'
+        ];
+
+        skeletonElements.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.classList.remove('skeleton-hidden');
+            }
+        });
+
+        const contentElements = [
+            'hero-content', 'about-content', 'techstack-content',
+            'projects-content', 'research-content', 'achievements-content',
+            'experience-content', 'certifications-content', 'profiles-content',
+            'education-content', 'projects-pagination', 'research-pagination',
+            'achievements-pagination', 'certifications-pagination', 'google-scholar-link'
+        ];
+
+        contentElements.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.classList.add('skeleton-hidden');
+            }
+        });
+    }
+
+    // Hide skeleton loaders and show actual content
+    hideSkeletonLoaders() {
+        const skeletonElements = [
+            'hero-skeleton', 'about-skeleton', 'techstack-skeleton', 
+            'projects-skeleton', 'research-skeleton', 'achievements-skeleton',
+            'experience-skeleton', 'certifications-skeleton', 'profiles-skeleton',
+            'education-skeleton'
+        ];
+
+        skeletonElements.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.classList.add('skeleton-hidden');
+            }
+        });
+
+        const contentElements = [
+            'hero-content', 'about-content', 'techstack-content',
+            'projects-content', 'research-content', 'achievements-content',
+            'experience-content', 'certifications-content', 'profiles-content',
+            'education-content', 'projects-pagination', 'research-pagination',
+            'achievements-pagination', 'certifications-pagination', 'google-scholar-link'
+        ];
+
+        contentElements.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.classList.remove('skeleton-hidden');
+            }
+        });
     }
 
     // Setup smooth scrolling navigation
@@ -365,8 +435,11 @@ class Portfolio {
 
         document.getElementById('bio-text').textContent = data.bio || '';
         const notToDisplay = ["discord","instagram"];
+        
         // Render social links
         const socialContainer = document.getElementById('social-links');
+        socialContainer.innerHTML = ''; // Clear any existing content
+        
         if (data.socials) {
             // Define icon mapping for each platform
             const iconMap = {
@@ -416,6 +489,8 @@ class Portfolio {
         if (!data) return;
 
         const container = document.getElementById('techstack-content');
+        container.innerHTML = ''; // Clear any existing content
+        
         data.forEach(category => {
             const categoryDiv = document.createElement('div');
             categoryDiv.className = 'tech-category';
@@ -688,6 +763,8 @@ class Portfolio {
         if (!data) return;
 
         const container = document.getElementById('experience-content');
+        container.innerHTML = ''; // Clear any existing content
+        
         data.forEach(item => {
             const timelineItem = document.createElement('div');
             timelineItem.className = 'timeline-item';
@@ -754,6 +831,8 @@ class Portfolio {
     // Render profiles & stats section
     renderProfiles() {
         const container = document.getElementById('profiles-content');
+        container.innerHTML = ''; // Clear any existing content
+        
         const data = this.allData.about;
         
         if (!data || !data.codingProfiles) return;
@@ -792,6 +871,8 @@ class Portfolio {
         if (!data) return;
 
         const container = document.getElementById('education-content');
+        container.innerHTML = ''; // Clear any existing content
+        
         data.forEach(item => {
             const timelineItem = document.createElement('div');
             timelineItem.className = 'timeline-item';
@@ -829,6 +910,8 @@ class Portfolio {
         }
 
         const socialContainer = document.getElementById('contact-social');
+        socialContainer.innerHTML = ''; // Clear any existing content
+        
         if (data.socials) {
             // Define icon mapping for each platform
             const iconMap = {
