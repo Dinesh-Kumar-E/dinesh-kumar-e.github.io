@@ -43,12 +43,18 @@ class Portfolio {
         // Show loading state initially
         this.showSkeletonLoaders();
 
-        for (const file of dataFiles) {
-            this.allData[file] = await this.fetchJSON(`data/${file}.json`);
-        }
+        // Fetch all JSON files in parallel
+        const results = await Promise.all(
+            dataFiles.map(file => this.fetchJSON(`data/${file}.json`))
+        );
+
+        // Assign results back into this.allData
+        dataFiles.forEach((file, i) => {
+            this.allData[file] = results[i];
+        });
 
         // Set profile URLs in config from about.json
-        if (this.allData.about && this.allData.about.socials) {
+        if (this.allData.about?.socials) {
             config.profiles.github = this.allData.about.socials.github || '';
             config.profiles.linkedin = this.allData.about.socials.linkedin || '';
         }
