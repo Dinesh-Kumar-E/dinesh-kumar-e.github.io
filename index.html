@@ -481,9 +481,62 @@
                         <div class="contact-social" id="contact-social"></div>
                     </div>
                 </div>
-                <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSeTJxiSZtpFDvBzBXVww9Xwwbtc6axugEy5dHeHEoRb5wRZ0w/viewform?embedded=true"
-                    height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <!-- Custom Contact Form -->
+                <div class="contact-form-container">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeTJxiSZtpFDvBzBXVww9Xwwbtc6axugEy5dHeHEoRb5wRZ0w/formResponse"
+                          target="_self"
+                          id="portfolioContactForm"
+                          method="POST"
+                          class="contact-form">
+                        <div class="form-header">
+                            <h3>Let's Talk</h3>
+                            <p>Feel free to reach out for collaborations, opportunities, or just to say hello!</p>
+                        </div>
+
+                        <!-- Name Field -->
+                        <div class="form-group">
+                            <label for="entry.804542360">Name *</label>
+                            <input id="entry.804542360" 
+                                   type="text" 
+                                   name="entry.804542360" 
+                                   class="form-control" 
+                                   required 
+                                   placeholder="Your full name">
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="entry.68279867">Email *</label>
+                            <input id="entry.68279867" 
+                                   type="email" 
+                                   name="entry.68279867" 
+                                   class="form-control" 
+                                   required 
+                                   placeholder="your.email@example.com">
+                        </div>
+
+                        <!-- Subject Field -->
+                        <div class="form-group">
+                            <label for="entry.452914907">Message *</label>
+                            <textarea id="entry.452914907" 
+                                      name="entry.452914907" 
+                                      class="form-control" 
+                                      required 
+                                      rows="5" 
+                                      placeholder="Tell me about your project, opportunity, or just say hello..."></textarea>
+                        </div>
+
+                        <!-- Hidden Fields -->
+                        <input type="hidden" name="fvv" value="1">
+                        <input type="hidden" name="fbzx" value="6733199749715421319">
+                        <input type="hidden" name="pageHistory" value="0">
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-submit">
+                            <span class="btn-text">Send Message</span>
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>

@@ -243,54 +243,81 @@ class Portfolio {
 
     // Setup contact form
     setupContactForm() {
-        const form = document.getElementById('contact-form');
-        const submitBtn = document.getElementById('submit-btn');
-        const formStatus = document.getElementById('form-status');
+        const form = document.getElementById('portfolioContactForm');
+        const submitBtn = form?.querySelector('.btn-submit');
+        const btnText = submitBtn?.querySelector('.btn-text');
 
-        if (!form) return;
+        if (!form || !submitBtn) return;
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            // Show loading state
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-            formStatus.className = 'form-status loading';
-            formStatus.textContent = 'Sending your message...';
+            // Freeze the form during submission
+            const formInputs = form.querySelectorAll('input, textarea, button');
+            formInputs.forEach(input => input.disabled = true);
+            form.classList.add('form-sending');
+            
+            // Change button to "Sending..." state
+            btnText.textContent = 'Sending...';
+            submitBtn.classList.add('btn-sending');
 
             try {
-                const formData = new FormData(form);
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    // Success
-                    formStatus.className = 'form-status success';
-                    formStatus.textContent = 'Thank you! Your message has been sent successfully.';
-                    form.reset();
-                } else {
-                    throw new Error('Network response was not ok');
-                }
-            } catch (error) {
-                // Error
-                formStatus.className = 'form-status error';
-                formStatus.textContent = 'Sorry, there was an error sending your message. Please try again.';
-                console.error('Form submission error:', error);
-            } finally {
-                // Reset button state
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Message';
+                // Create a temporary iframe to submit the form
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.name = 'hidden_iframe';
+                document.body.appendChild(iframe);
                 
-                // Hide status after 5 seconds
+                // Set form target to iframe
+                form.target = 'hidden_iframe';
+                
+                // Submit form
+                form.submit();
+                
+                // Keep sending state for 2 seconds
                 setTimeout(() => {
-                    formStatus.style.display = 'none';
-                    formStatus.className = 'form-status';
-                }, 5000);
+                    // Change to "Sent" state briefly
+                    btnText.textContent = 'Sent!';
+                    submitBtn.classList.remove('btn-sending');
+                    submitBtn.classList.add('btn-sent');
+                    
+                    // Show success tooltip
+                    this.showTooltip('Thank you! I received your message and will get back to you soon!');
+                    
+                    // Clear the form
+                    form.reset();
+                    
+                    // Clean up iframe
+                    setTimeout(() => {
+                        if (document.body.contains(iframe)) {
+                            document.body.removeChild(iframe);
+                        }
+                    }, 100);
+                    
+                    // Reset button and form after another second
+                    setTimeout(() => {
+                        btnText.textContent = 'Send Message';
+                        submitBtn.classList.remove('btn-sent');
+                        form.classList.remove('form-sending');
+                        formInputs.forEach(input => input.disabled = false);
+                    }, 1000);
+                    
+                }, 2000);
+                
+            } catch (error) {
+                // Error handling
+                console.error('Form submission error:', error);
+                
+                // Show error tooltip
+                this.showTooltip('Something went wrong. Please try again or contact me directly via email.');
+                
+                // Reset form state
+                setTimeout(() => {
+                    btnText.textContent = 'Send Message';
+                    submitBtn.classList.remove('btn-sending');
+                    form.classList.remove('form-sending');
+                    formInputs.forEach(input => input.disabled = false);
+                }, 1000);
             }
         });
     }
@@ -334,8 +361,9 @@ class Portfolio {
                         navigator.clipboard.writeText(url).then(() => {
                             // Visual feedback - smooth icon transition
                             linkIcon.textContent = 'done';
-                            linkIcon.style.color = '#28a745'; // Green color for success
+                            linkIcon.style.color = '#000000'; // Black color for success
                             setTimeout(() => {
+                                
                                 linkIcon.textContent = 'link';
                                 linkIcon.style.color = ''; // Reset to original color
                             }, 1500);
@@ -1095,22 +1123,79 @@ class Portfolio {
     showTooltip(message) {
         const tooltip = document.createElement('div');
         tooltip.textContent = message;
+        
+        // Use consistent black styling for all tooltips (including form messages)
+        const isSuccessMessage = message.includes('✅');
+        const isErrorMessage = message.includes('❌');
+        
+        // Check if mobile
+        const isMobile = window.innerWidth <= 768;
+        
         tooltip.style.cssText = `
             position: fixed;
-            top: 20px;
-            right: 20px;
+            ${isMobile ? 'top: 80px; right: 8px; left: 8px; max-width: none; text-align: center;' : 'top: 20px; right: 20px; max-width: 300px;'}
             background: #333;
             color: white;
-            padding: 8px 16px;
+            padding: 12px 16px;
             border-radius: 4px;
             z-index: 10000;
             font-size: 14px;
+            font-weight: 400;
+            animation: slideInRight 0.3s ease-out;
+            word-wrap: break-word;
         `;
+        
+        // Add animation styles to document if not already present
+        if (!document.getElementById('tooltip-styles')) {
+            const style = document.createElement('style');
+            style.id = 'tooltip-styles';
+            style.textContent = `
+                @keyframes slideInRight {
+                    from {
+                        opacity: 0;
+                        transform: translateX(100%);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+                @keyframes slideOutRight {
+                    from {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                    to {
+                        opacity: 0;
+                        transform: translateX(100%);
+                    }
+                }
+                @media (max-width: 768px) {
+                    .tooltip-mobile {
+                        top: 80px !important;
+                        right: 8px !important;
+                        left: 8px !important;
+                        max-width: none !important;
+                        text-align: center;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
         document.body.appendChild(tooltip);
 
+        // Show for longer if it's a form message
+        const duration = (isSuccessMessage || isErrorMessage) ? 4000 : 2000;
+        
         setTimeout(() => {
-            document.body.removeChild(tooltip);
-        }, 2000);
+            tooltip.style.animation = 'slideOutRight 0.3s ease-in';
+            setTimeout(() => {
+                if (document.body.contains(tooltip)) {
+                    document.body.removeChild(tooltip);
+                }
+            }, 300);
+        }, duration);
     }
 
     // Setup timeline scroll animation
