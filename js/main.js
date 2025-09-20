@@ -244,81 +244,79 @@ class Portfolio {
     // Setup contact form
     setupContactForm() {
         const form = document.getElementById('portfolioContactForm');
+        const hiddenIframe = document.getElementById('hidden_iframe');
         const submitBtn = form?.querySelector('.btn-submit');
         const btnText = submitBtn?.querySelector('.btn-text');
+        const btnIcon = submitBtn?.querySelector('.btn-icon');
 
-        if (!form || !submitBtn) return;
+        if (!form || !hiddenIframe || !submitBtn) return;
 
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            // Freeze the form during submission
-            const formInputs = form.querySelectorAll('input, textarea, button');
-            formInputs.forEach(input => input.disabled = true);
-            form.classList.add('form-sending');
-            
-            // Change button to "Sending..." state
-            btnText.textContent = 'Sending...';
-            submitBtn.classList.add('btn-sending');
-
-            try {
-                // Create a temporary iframe to submit the form
-                const iframe = document.createElement('iframe');
-                iframe.style.display = 'none';
-                iframe.name = 'hidden_iframe';
-                document.body.appendChild(iframe);
-                
-                // Set form target to iframe
-                form.target = 'hidden_iframe';
-                
-                // Submit form
-                form.submit();
-                
-                // Keep sending state for 2 seconds
-                setTimeout(() => {
-                    // Change to "Sent" state briefly
-                    btnText.textContent = 'Sent!';
-                    submitBtn.classList.remove('btn-sending');
-                    submitBtn.classList.add('btn-sent');
-                    
-                    // Show success tooltip
-                    this.showTooltip('Thank you! I received your message and will get back to you soon!');
-                    
-                    // Clear the form
-                    form.reset();
-                    
-                    // Clean up iframe
-                    setTimeout(() => {
-                        if (document.body.contains(iframe)) {
-                            document.body.removeChild(iframe);
-                        }
-                    }, 100);
-                    
-                    // Reset button and form after another second
-                    setTimeout(() => {
-                        btnText.textContent = 'Send Message';
-                        submitBtn.classList.remove('btn-sent');
-                        form.classList.remove('form-sending');
-                        formInputs.forEach(input => input.disabled = false);
-                    }, 1000);
-                    
-                }, 2000);
-                
-            } catch (error) {
-                // Error handling
-                console.error('Form submission error:', error);
-                
-                // Show error tooltip
-                this.showTooltip('Something went wrong. Please try again or contact me directly via email.');
-                
-                // Reset form state
-                setTimeout(() => {
+        // Button state management
+        const setButtonState = (state) => {
+            switch (state) {
+                case 'submitting':
+                    btnText.textContent = 'Submitting';
+                    btnIcon.className = 'btn-icon fas fa-spinner fa-spin';
+                    btnIcon.style.display = 'inline-block';
+                    submitBtn.disabled = true;
+                    break;
+                case 'submitted':
+                    btnText.textContent = 'Submitted';
+                    btnIcon.className = 'btn-icon fas fa-check';
+                    btnIcon.style.display = 'inline-block';
+                    break;
+                case 'default':
                     btnText.textContent = 'Send Message';
-                    submitBtn.classList.remove('btn-sending');
-                    form.classList.remove('form-sending');
-                    formInputs.forEach(input => input.disabled = false);
-                }, 1000);
+                    btnIcon.style.display = 'none';
+                    btnIcon.className = 'btn-icon';
+                    submitBtn.disabled = false;
+                    break;
             }
+        };
+
+        // Function to show success message after form submission
+        const showSuccessMessage = () => {
+            // Change to submitted state
+            setButtonState('submitted');
+            
+            // Show success tooltip
+            this.showTooltip('Form submitted successfully! Thank you for your message.');
+            
+            // Reset the form after successful submission
+            form.reset();
+            
+            // Reset button to default state after 2 seconds
+            setTimeout(() => {
+                setButtonState('default');
+            }, 2000);
+        };
+
+        // Function to show error message
+        const showErrorMessage = () => {
+            this.showTooltip('There was an error submitting the form. Please try again.');
+            // Reset button to default state
+            setButtonState('default');
+        };
+
+        // Set up iframe load event listener to detect form submission
+        hiddenIframe.onload = function() {
+            // Check if the iframe has loaded content (form submission completed)
+            if (this.contentDocument || this.contentWindow.document) {
+                showSuccessMessage();
+            }
+        };
+
+        // Form submission handling
+        form.addEventListener('submit', function(event) {
+            // Change to submitting state immediately
+            setButtonState('submitting');
+            
+            // Let the form submit naturally to the iframe
+            // The iframe onload event will handle the success message
+            setTimeout(function() {
+                // Fallback success message if iframe doesn't load
+                showSuccessMessage();
+            }, 2000);
         });
     }
 

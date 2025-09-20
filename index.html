@@ -484,7 +484,7 @@
                 <!-- Custom Contact Form -->
                 <div class="contact-form-container">
                     <form action="https://docs.google.com/forms/d/e/1FAIpQLSeTJxiSZtpFDvBzBXVww9Xwwbtc6axugEy5dHeHEoRb5wRZ0w/formResponse"
-                          target="_self"
+                          target="hidden_iframe"
                           id="portfolioContactForm"
                           method="POST"
                           class="contact-form">
@@ -533,9 +533,13 @@
 
                         <!-- Submit Button -->
                         <button type="submit" class="btn-submit">
+                            <i class="btn-icon" style="display: none;"></i>
                             <span class="btn-text">Send Message</span>
                         </button>
                     </form>
+                    
+                    <!-- Hidden iframe to capture form submission -->
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
                 </div>
             </div>
         </section>
