@@ -1007,8 +1007,13 @@ class Portfolio {
         const existingDetail = card.querySelector('.detail-content');
         
         if (existingDetail) {
-            existingDetail.remove();
-            button.textContent = 'Show Details';
+            if (existingDetail.style.display !== 'none') {
+                existingDetail.style.display = 'none';
+                button.textContent = 'Show Details';
+            } else {
+                existingDetail.style.display = 'block';
+                button.textContent = 'Hide Details';
+            }
             return;
         }
 

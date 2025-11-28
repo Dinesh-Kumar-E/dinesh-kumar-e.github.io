@@ -1,5 +1,15 @@
 [
   {
+  "id": "proj-0",
+  "title": "Research Flow",
+  "tech": ["Python", "FastAPI", "RAG", "Agentic AI", "LangChain", "LangGraph", "ChromaDB"],
+  "summary": "An interactive AI research agent designed to help users research companies and generate comprehensive account plans through natural conversation. Features autonomous research workflows, dynamic plan generation, RAG-based document analysis, and real-time data visualization using Mermaid.js.",
+  "detail": "details/projects/proj-0.md",
+  "links": {
+    "github": "https://github.com/Dinesh-Kumar-E/ResearchFlow"
+  }
+  },
+  {
     "id": "proj-1",
     "title": "No More Brainrot",
     "tech": ["JavaScript", "HTML", "WebExtensions", "Firefox", "Manifest V2"],
