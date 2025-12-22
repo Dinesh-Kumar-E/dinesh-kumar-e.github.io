@@ -501,3 +501,128 @@ with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
     f.write(str(soup.prettify()))
 
 print(f"Successfully compiled {TEMPLATE_FILE} to {OUTPUT_FILE}")
+
+# --- SITEMAP GENERATION ---
+print("Updating sitemap.xml...")
+base_url = "https://dinesh-kumar-e.github.io/"
+sitemap_urls = [
+    {"loc": base_url, "priority": "1.0", "changefreq": "weekly"},
+    {"loc": base_url + "#about", "priority": "0.9", "changefreq": "monthly"},
+    {"loc": base_url + "#techstack", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": base_url + "#projects", "priority": "0.9", "changefreq": "weekly"},
+]
+
+# Add projects to sitemap
+if 'projects' in data:
+    for project in data['projects']:
+        sitemap_urls.append({
+            "loc": f"{base_url}#projects/{project['id']}",
+            "priority": "0.8",
+            "changefreq": "monthly"
+        })
+
+# Add research to sitemap
+if 'research' in data:
+    for item in data['research']:
+        sitemap_urls.append({
+            "loc": f"{base_url}#research/{item['id']}",
+            "priority": "0.7",
+            "changefreq": "monthly"
+        })
+
+# Generate XML content
+sitemap_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
+sitemap_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'
+today = datetime.now().strftime("%Y-%m-%d")
+
+for url in sitemap_urls:
+    sitemap_content += '  <url>\n'
+    sitemap_content += f'    <loc>{url["loc"]}</loc>\n'
+    sitemap_content += f'    <lastmod>{today}</lastmod>\n'
+    sitemap_content += f'    <changefreq>{url["changefreq"]}</changefreq>\n'
+    sitemap_content += f'    <priority>{url["priority"]}</priority>\n'
+    
+    # Add image for root URL
+    if url["loc"] == base_url and 'about' in data and 'photo' in data['about']:
+        photo_url = base_url + data['about']['photo']
+        sitemap_content += '    <image:image>\n'
+        sitemap_content += f'      <image:loc>{photo_url}</image:loc>\n'
+        sitemap_content += f'      <image:title>{data["about"].get("name", "")} - {data["about"].get("tagline", "")}</image:title>\n'
+        sitemap_content += '    </image:image>\n'
+        
+    sitemap_content += '  </url>\n'
+
+sitemap_content += '</urlset>'
+
+with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
+    f.write(sitemap_content)
+print("Successfully updated sitemap.xml")
+
+# --- LLMS.TXT GENERATION ---
+print("Generating llms.txt...")
+llms_content = ""
+if 'about' in data:
+    name = data['about'].get('name', 'Portfolio')
+    tagline = data['about'].get('tagline', '')
+    bio = data['about'].get('bio', '')
+    
+    llms_content += f"# {name}\n\n"
+    if tagline:
+        llms_content += f"> {tagline}\n\n"
+    if bio:
+        llms_content += f"{bio}\n\n"
+
+# Projects
+if 'projects' in data:
+    llms_content += "## Projects\n\n"
+    for project in data['projects']:
+        title = project.get('title', 'Project')
+        summary = project.get('summary', '')
+        # Determine link
+        link = ""
+        links = project.get('links', {})
+        if 'github' in links:
+            link = links['github']
+        elif 'demo' in links:
+            link = links['demo']
+        else:
+            link = f"{base_url}#projects/{project.get('id', '')}"
+            
+        llms_content += f"- [{title}]({link}): {summary}\n"
+    llms_content += "\n"
+
+# Research
+if 'research' in data:
+    llms_content += "## Research\n\n"
+    for item in data['research']:
+        title = item.get('title', 'Paper')
+        summary = item.get('summary', '')
+        link = item.get('link') or (f"https://doi.org/{item['doi']}" if 'doi' in item else "")
+        if not link:
+             link = f"{base_url}#research/{item.get('id', '')}"
+        
+        llms_content += f"- [{title}]({link}): {summary}\n"
+    llms_content += "\n"
+
+# Experience
+if 'experience' in data:
+    llms_content += "## Experience\n\n"
+    for item in data['experience']:
+        role = item.get('role', '')
+        company = item.get('company', '')
+        desc = item.get('description', '')
+        llms_content += f"- **{role}** at {company}: {desc}\n"
+    llms_content += "\n"
+
+# Skills
+if 'techstack' in data:
+    llms_content += "## Skills\n\n"
+    for category in data['techstack']:
+        cat_name = category.get('category', '')
+        skills = ", ".join(category.get('skills', []))
+        llms_content += f"- **{cat_name}**: {skills}\n"
+    llms_content += "\n"
+
+with open(os.path.join(BASE_DIR, 'llms.txt'), 'w', encoding='utf-8') as f:
+    f.write(llms_content)
+print("Successfully generated llms.txt")

@@ -6,7 +6,8 @@
   "summary": "An interactive AI research agent designed to help users research companies and generate comprehensive account plans through natural conversation. Features autonomous research workflows, dynamic plan generation, RAG-based document analysis, and real-time data visualization using Mermaid.js.",
   "detail": "details/projects/proj-0.md",
   "links": {
-    "github": "https://github.com/Dinesh-Kumar-E/ResearchFlow"
+    "github": "https://github.com/Dinesh-Kumar-E/ResearchFlow",
+    "demo": "https://youtu.be/XtnH8QRqQEA"
   }
   },
   {

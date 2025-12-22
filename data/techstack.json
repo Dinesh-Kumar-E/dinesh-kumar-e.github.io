@@ -9,7 +9,7 @@
   },
   {
     "category": "Machine Learning & AI",
-    "skills": ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "OpenCV", "Hugging Face", "Ollama"]
+    "skills": ["TensorFlow", "PyTorch", "Scikit-learn", "LangGraph", "N8N", "Hugging Face", "Ollama", "ChromaDB", "RAG", "AI Agents" ]
   },
   {
     "category": "Backend & Databases",
@@ -18,9 +18,5 @@
   {
     "category": "Cloud & DevOps",
     "skills": ["AWS", "Docker", "Kubernetes", "Git", "GitHub Actions"]
-  },
-  {
-    "category": "Tools & Platforms",
-    "skills": ["VS Code", "Jupyter", "Postman", "Linux", "Windows", "Figma"]
   }
 ]

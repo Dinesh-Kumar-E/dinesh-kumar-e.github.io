@@ -1,0 +1,33 @@
+# Dinesh Kumar E
+
+> ML Engineer | Software Developer | Researcher
+
+I’m Dinesh Kumar E, a curious builder who loves turning ideas into reality through code. From experimenting with machine learning and language models to building clean, efficient web solutions, I enjoy working at the intersection of research and development. I love to learn new technologies, solving real-world problems, and share my work with the community. Outside of projects, I’m always exploring ways to push boundaries, simplify complexity, and create meaningful impact.
+
+## Projects
+
+- [Research Flow](https://github.com/Dinesh-Kumar-E/ResearchFlow): An interactive AI research agent designed to help users research companies and generate comprehensive account plans through natural conversation. Features autonomous research workflows, dynamic plan generation, RAG-based document analysis, and real-time data visualization using Mermaid.js.
+- [No More Brainrot](https://github.com/Dinesh-Kumar-E/No-More-Brainrot): A powerful **Firefox extension** that blocks addictive content like YouTube Shorts and Instagram Reels, helping users reclaim their time from digital distractions. Features smart content blocking, statistics tracking, and customizable redirect URLs.
+- [pyCHIP8-neo](https://github.com/Dinesh-Kumar-E/pyCHIP8-neo): A modern **CHIP-8 emulator** built with Python and PyQt6, featuring a development GUI for debugging and ROM management. Supports classic games like Pong, Tetris, and includes step-by-step execution capabilities.
+- [QuizBuzz](https://github.com/Dinesh-Kumar-E/Quizbuzz): A modern, feature-rich **web-based quiz application** with retro aesthetics. Supports LaTeX math rendering, multi-select questions, real-time progress tracking, and includes tools for data management and slide generation.
+- [WordleAI](https://github.com/Dinesh-Kumar-E/WordleAI): An intelligent **Wordle solver** that uses entropy-based algorithms and elimination strategies to solve word puzzles optimally. Features both CLI interface and web-based visualization with real-time probability calculations.
+- [SafeJourney-AI](https://github.com/Dinesh-Kumar-E/SafeJourney-AI): An advanced **driver drowsiness detection system** that uses machine learning and computer vision to analyze real-time camera feeds. Features facial landmark detection, EAR/MAR calculations, and live dashboard visualization.
+
+## Research
+
+- [Smart Healthcare Assistant with Epidemiological Modelling](https://ieeexplore.ieee.org/abstract/document/10780252): This paper introduces a hybrid system combining epidemiological models with AI techniques, including NLP and LLM-powered chatbots, to enhance epidemic modeling and healthcare accessibility.
+- [Water Quality Parameters Modeling of Thamirabarani River](https://ieeexplore.ieee.org/abstract/document/10627895): This study analyzes Thamirabarani River water quality using 28 parameters and machine learning algorithms to classify water into 5 Designated Best Use classes.
+
+## Experience
+
+- **Software Developer Intern** at Genik Technologies: Developed a FastAPI-based microservice on an Oracle VPS to handle over 1000 concurrent requests, improved response times by 40% with persistent disk caching, and enforced rate limiting to maintain 99.9% uptime.
+- **Web Developer Intern** at SSC Max Academy: Built responsive web applications using React.js and Node.js. Implemented RESTful APIs and integrated third-party services. Collaborated with design team to create user-friendly interfaces and improved application performance by 30%.
+
+## Skills
+
+- **Programming Languages**: Python, C, C++, JavaScript
+- **Web Development**: React, Node.js, HTML5, CSS3, Tailwind CSS
+- **Machine Learning & AI**: TensorFlow, PyTorch, Scikit-learn, LangGraph, N8N, Hugging Face, Ollama, ChromaDB, RAG, AI Agents
+- **Backend & Databases**: Flask, Django, FastAPI, MongoDB, PostgreSQL, MySQL, Redis
+- **Cloud & DevOps**: AWS, Docker, Kubernetes, Git, GitHub Actions
+

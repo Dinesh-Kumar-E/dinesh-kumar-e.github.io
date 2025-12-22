@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://dinesh-kumar-e.github.io/sitemap.xml
